@@ -1,6 +1,6 @@
 package com.moise.garage;
 
-public class Vehicule {
+public abstract class Vehicule {
 	String modelName;
 	String description; 
 	String manufacturer;
@@ -20,13 +20,9 @@ public class Vehicule {
 		this.weight = weight;
 	   }
 		
-	public void start() {
-		System.out.println("Je suis "+this.modelName+" et je démarre");
-	}
+	public abstract void start();
 	
-	public void stop() {
-		System.out.println("Je suis "+this.modelName+" et je m'arrete");
-	}
+	public abstract void stop();
 
 	public String getModelName() {
 		return modelName;

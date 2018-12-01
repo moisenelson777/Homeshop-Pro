@@ -44,6 +44,17 @@ public class Voiture extends Vehicule {
 	public List<String> getOptions() {
 		return options;
 	}
+
+	@Override
+	public void start() {
+		System.out.println("Je suis " + modelName + " je consomme " + litrePar100km + " au 100km et je démarre !" );
+		
+	}
+
+	@Override
+	public void stop() {
+		System.out.println("Je suis " + modelName + " j'arrête mon moteur " + moteur);
+	}
 	
 
 }
