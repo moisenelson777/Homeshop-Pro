@@ -3,11 +3,13 @@ package com.moise.homeshop;
 import java.util.Map;
 
 public class Bill {
-	private Customer customer;
+	private Client client;
+	private Livraison livraison;
 	private Map<Produit, Integer> produits;
 
-	public Bill(Customer customer) {
-		this.customer = customer;
+	public Bill(Client client, Livraison livraison) {
+		this.client = client;
+		this.livraison = livraison;
 	}
 
 	public void addProduct(Produit produit, Integer quantite) {
@@ -15,8 +17,8 @@ public class Bill {
 		
 	}
 
-	public Customer getCustomer() {
-		return customer;
+	public Client getClient() {
+		return client;
 	}
 
 	public Map<Produit, Integer> getProduits() {
